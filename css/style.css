@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+#wrap{
+    width: 992px;
+    margin: 0 auto;
+    border: #aaa 1px solid;
+}
+a{text-decoration: none;
+color: inherit;}
+
+section{
+    border: 1px dotted #aaa;
+}
+
+/************************************************/
+/****************** header ********************/
+header{
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    padding-top: 10px;
+}
+header nav{
+    width: 50%;
+    margin: 0 auto;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+}
+header ul li{
+    width: 100px;
+    list-style-type: none;
+    margin-left: 10px;
+    line-height: 40px;
+}
+header ul li:first-child{
+    margin: 0;
+}
+
+/****************** sec01 ********************/
+#sec01{
+    height: 400px;
+    border: none;
+}
+#sec01 img{
+    width: 100%;
+    height: 360px;
+}
+
+/****************** sec02 ********************/
+#sec02{
+    padding: 30px 0px;
+    padding-bottom: 80px;
+}
+h2{
+   margin-left: 70px;
+}
+#sec02 i{
+    font-weight: bold;
+}
+.con{
+    display: flex;
+    justify-content: center; 
+    /*space-between을 사용해서 .con에 있는 img에 40% text에 50%를 줘서 정렬할 수도 있음*/
+    margin-top: 20px;
+}
+.con img{
+    padding-right: 50px;
+}
+.text{
+    line-height: 3;
+    width: 370px;
+}
+
+/****************** sec03 ********************/
+#sec03{
+    padding: 30px 0px;
+    padding-bottom: 80px;
+    background-color: #eee;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+#sec03 img{
+    width: 370px;
+    height: 206px;
+}
+
+/****************** sec04 ********************/
+#sec04{
+    padding: 30px 0px;
+    padding-bottom: 50px;
+
+}
+#sec04 .con{
+    margin-top: 0;
+}
+#sec04 .con img{
+    margin-left: 50px;
+    padding-right: 0;
+    border-radius: 50%;
+}
+#sec04 ol li{
+    line-height: 2;
+    font-weight: bold;
+
+}
+
+/****************** footer ********************/
+footer{
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#top{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    line-height: 75px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*991~768 모바일*/
+
+@media screen and (max-width:991px) and (min-width:768px) {
+    #wrap{width: 100%;}
+    section{width: 100%;}
+    #sec02,#sec03{
+        width: 50%; /*sec02랑sec03을 반씩 가져감*/
+    }
+    .con img{display: none;} /*사진 안보이도록 만들어줌*/
+    main{display: flex;
+        flex-wrap:wrap;}
+}
+
+@media (max-width:767px){
+    #wrap{width: 100%;}
+    .con img{display: none;}
+    main{display: block;}
+    #sec02,#sec03{
+        width: 100%;
+    }
+}
+
+@media (max-width:600px){
+    nav{width: 100%;}
+
+    header nav ul li{
+        width: calc((100% - 20px) / 3)
+    }
+}
